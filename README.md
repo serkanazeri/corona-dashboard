@@ -2,6 +2,8 @@
 
 An application that you can follow daily corona virus cases in the world.
 
+Demo: [Corona Dashboard](https://bit.ly/2L7wcDe)
+
 API used: https://covid19api.com/
 
 ## Usage
