@@ -4,6 +4,8 @@ An application that you can follow daily corona virus cases in the world.
 
 API used: https://covid19api.com/
 
+Demo: [corona-dashboard](https://sa-corona-dashboard.netlify.app/)
+
 ## Usage
 
 ### `yarn start`
