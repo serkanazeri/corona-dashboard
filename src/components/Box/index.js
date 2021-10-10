@@ -22,7 +22,7 @@ export const Box = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:3001/summary`).then((res) => {
+    axios.get(`https://api.covid19api.com/summary`).then((res) => {
       setData(res.data.Countries);
       setLoading(false);
     });
