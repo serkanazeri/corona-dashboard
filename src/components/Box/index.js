@@ -37,8 +37,8 @@ export const Box = () => {
     );
   }, [data, search]);
 
-  const imgUrl = "https://www.countryflags.io/";
-  const imgType = "/flat/64.png";
+  const imgUrl = "https://flagcdn.com/64x48/";
+  const imgType = ".webp";
 
   if (loading) {
     return <Loading />;
@@ -48,10 +48,11 @@ export const Box = () => {
     <BoxContainer>
       {filteredData &&
         filteredData.map((item, index) => (
+          
           <Item key={index}>
             <CountryFlagNameBox>
               <CountryFlag
-                src={imgUrl + item.CountryCode + imgType}
+                src={imgUrl + item.CountryCode.toLowerCase() + imgType}
                 alt={item.Country}
               />
               <CountryName>{item.Country}</CountryName>
