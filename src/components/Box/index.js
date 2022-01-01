@@ -37,7 +37,7 @@ export const Box = () => {
     );
   }, [data, search]);
 
-  const imgUrl = "https://flagcdn.com/64x48/";
+  const imgUrl = "https://flagcdn.com/48x36/";
   const imgType = ".webp";
 
   if (loading) {
@@ -54,6 +54,8 @@ export const Box = () => {
               <CountryFlag
                 src={imgUrl + item.CountryCode.toLowerCase() + imgType}
                 alt={item.Country}
+                width={48}
+                height={36}
               />
               <CountryName>{item.Country}</CountryName>
             </CountryFlagNameBox>

@@ -35,7 +35,6 @@ export const CountryFlagNameBox = styled.div`
 `;
 
 export const CountryFlag = styled.img`
-  width: 3em;
   margin-right: 1em;
 `;
 
