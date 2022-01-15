@@ -48,32 +48,35 @@ export const Box = () => {
     <BoxContainer>
       {filteredData &&
         filteredData.map((item, index) => (
-          
-          <Item key={index}>
-            <CountryFlagNameBox>
-              <CountryFlag
-                src={imgUrl + item.CountryCode.toLowerCase() + imgType}
-                alt={item.Country}
-                width={48}
-                height={36}
-              />
-              <CountryName>{item.Country}</CountryName>
-            </CountryFlagNameBox>
-            <CovidDataList>
-              <CovidDataListItem>
-                <CovidDataName>Yeni Vaka</CovidDataName>
-                <CovidData>{item.NewConfirmed}</CovidData>
-              </CovidDataListItem>
-              <CovidDataListItem>
-                <CovidDataName>Vefat Sayısı</CovidDataName>
-                <CovidData>{item.NewDeaths}</CovidData>
-              </CovidDataListItem>
-              <CovidDataListItem>
-                <CovidDataName>İyileşen Hasta</CovidDataName>
-                <CovidData>{item.NewRecovered}</CovidData>
-              </CovidDataListItem>
-            </CovidDataList>
-          </Item>
+          <>
+            {item?.NewConfirmed !== 0 && (
+              <Item key={index}>
+                <CountryFlagNameBox>
+                  <CountryFlag
+                    src={imgUrl + item.CountryCode.toLowerCase() + imgType}
+                    alt={item.Country}
+                    width={48}
+                    height={36}
+                  />
+                  <CountryName>{item.Country}</CountryName>
+                </CountryFlagNameBox>
+                <CovidDataList>
+                  <CovidDataListItem>
+                    <CovidDataName>Yeni Vaka</CovidDataName>
+                    <CovidData>{item.NewConfirmed}</CovidData>
+                  </CovidDataListItem>
+                  <CovidDataListItem>
+                    <CovidDataName>Vefat Sayısı</CovidDataName>
+                    <CovidData>{item.NewDeaths}</CovidData>
+                  </CovidDataListItem>
+                  <CovidDataListItem>
+                    <CovidDataName>İyileşen Hasta</CovidDataName>
+                    <CovidData>{item.NewRecovered}</CovidData>
+                  </CovidDataListItem>
+                </CovidDataList>
+              </Item>
+            )}
+          </>
         ))}
     </BoxContainer>
   );
